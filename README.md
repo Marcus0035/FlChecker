@@ -1,12 +1,3 @@
-# FL Studio Price Checker
-
-🎵 Automatic FL Studio price monitor th## 📧 Setting up Gmail Email Notifications
-
-Email notifications are **already configured** with your credentials:
-- **From:** marcus0035dev@gmail.com
-- **To:** marek.dvoracek606@gmail.com  
-- **App Password:** Configured ✅
-
 The application will automatically send email notifications when the price drops below the previous price.
 
 ### How it works:
