@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  flchecker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fl-studio-price-checker
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Prague
+      - DOTNET_ENVIRONMENT=Production
+      # Email configuration via environment variables (optional)
+      # - Email__FromEmail=your-email@gmail.com
+      # - Email__ToEmail=your-email@gmail.com
+      # - Email__Username=your-email@gmail.com
+      # - Email__Password=your-app-password
+    volumes:
+      - ./appsettings.json:/app/appsettings.json:ro
+      - ./logs:/app/logs
+    networks:
+      - flchecker-network
+
+networks:
+  flchecker-network:
+    driver: bridge
